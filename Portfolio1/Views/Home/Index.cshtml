@@ -1,0 +1,102 @@
+﻿@{
+    ViewData["Title"] = "Página Inicial";
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Arthur Rodrigues - Desenvolvedor de Software">
+    <meta name="keywords" content="portfólio, software, desenvolvimento, projetos">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/inicial.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+    #contatos {
+        filter: brightness(0.8);
+    }
+
+    .github-logo, .mail-logo {
+        width: 35px; 
+        height: 35px;
+        vertical-align: middle;
+    }
+
+        .cursor {
+            display: inline-block;
+            animation: blink 0.7s step-end infinite;
+            color: #00ff00;
+        }
+
+</style>
+
+</head>
+<body>
+    <header class="hero text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">
+                <span id="typingEffect"></span><span id="cursor" class="cursor">_</span>
+            </h1>
+
+
+
+            <p class="lead">Arthur Rodrigues</p>
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <section id="sobre-mim" class="mb-5">
+            <h2 class="text-green">Sobre Mim</h2>
+            <p class="text-green">
+                Olá, sou Arthur Rodrigues, tenho 18 anos, sou desenvolvedor back-end apaixonado por algoritmos e sistemas embarcados, já trabalhei com integração de sistemas e com desenvolvimento utilizando Python com Flask e também Node.JS.
+            </p>
+        </section>
+
+        <div class="container mt-5">
+            <section id="projetos" class="mb-5">
+                <h2 class="text-center">Meus Projetos</h2>
+                <div class="row">
+                    @foreach (var projeto in Model)
+                    {
+                        <div class="col-md-4 projeto-card">
+                            <div class="card">
+                                <img src="/imagens/@projeto.Imagem" alt="@projeto.Titulo" class="card-img-top projeto-imagem">
+                                <div class="card-body">
+                                    <h5 class="card-title">@projeto.Titulo</h5>
+                                    <p class="card-text">@projeto.Descricao</p>
+                                    <a href="@projeto.Link" class="btn btn-custom">Ver Projeto</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </section>
+
+            <section id="contatos" class="mb-5">
+                <h2 class="text-green">Contatos</h2>
+                <ul class="list-unstyled text-green">
+                    <li>
+                        <img src="/imagens/mail-logo.png" alt="Email" class="mail-logo">
+                        <a href="mailto:arthurrodrigues.dev@gmail.com" class="text-green">arthurrodrigues.dev@gmail.com</a>
+                    </li>
+                    <li>
+                        <img src="/imagens/github-logo.png" alt="GitHub" class="github-logo">
+                        <a href="https://github.com/arthvr9" target="_blank" class="text-green">GitHub</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 Arthur Rodrigues. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="~/js/typingEffect.js"></script>
+</body>
+</html>

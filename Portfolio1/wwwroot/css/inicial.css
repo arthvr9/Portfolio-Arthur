@@ -1,0 +1,117 @@
+﻿body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: black;
+    color: #00ff00;
+}
+
+header {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar {
+    background-color: black;
+    border-bottom: 2px solid #00ff00;
+}
+
+.nav-link {
+    color: #00ff00;
+}
+
+    .nav-link:hover {
+        text-shadow: 0px 0px 5px #00ff00;
+    }
+
+#sobre-mim, #contatos {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+h2.text-green {
+    font-size: 2rem;
+    color: #00ff00;
+    text-shadow: 0px 0px 8px #00ff00;
+    margin-bottom: 15px;
+}
+
+.text-green {
+    color: #00ff00;
+    text-shadow: 0px 0px 5px #00ff00;
+    line-height: 1.6;
+}
+
+a.text-green {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+    a.text-green:hover {
+        text-decoration: underline;
+        text-shadow: 0px 0px 10px #00ff00;
+    }
+
+.list-unstyled {
+    text-align: left;
+    padding-left: 0;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.typing-effect {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    animation: typing 4s steps(30, end) infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+footer {
+    text-align: center;
+    color: #00ff00;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #0E0E0E;
+    border: none;
+}
+
+.card-body {
+    background-color: #0E0E0E;
+    color: #00FF00;
+}
+
+.projeto-imagem {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.btn-custom {
+    background-color: #00FF00;
+    color: #000;
+    border: none;
+}
+
+    .btn-custom:hover {
+        background-color: #00CC00;
+    }
